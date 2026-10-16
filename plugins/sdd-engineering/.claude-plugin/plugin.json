@@ -1,0 +1,11 @@
+{
+  "name": "sdd-engineering",
+  "description": "Spec-Driven Development pipeline: spec, plan, implement, verify, review",
+  "version": "1.0.0",
+  "author": { "name": "Vadym Shabetia", "email": "vadimshabetya89@gmail.com" },
+  "dependencies": [
+    "engineering-paved-path",
+    "research-tools",
+    "architecture-review"
+  ]
+}

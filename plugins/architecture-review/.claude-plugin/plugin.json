@@ -1,0 +1,7 @@
+{
+  "name": "architecture-review",
+  "description": "Generalized read-only architecture/layering review subagent — discovers applicable layering skills at runtime instead of assuming a fixed stack",
+  "version": "1.0.0",
+  "author": { "name": "Vadym Shabetia", "email": "vadimshabetya89@gmail.com" },
+  "dependencies": ["engineering-paved-path"]
+}

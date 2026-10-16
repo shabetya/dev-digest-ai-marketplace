@@ -6,5 +6,36 @@
     "name": "Vadym Shabetia",
     "email": "vadimshabetya89@gmail.com"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "engineering-paved-path",
+      "source": "./plugins/engineering-paved-path",
+      "description": "React, Next.js, Fastify, architecture, testing, and security engineering skills",
+      "category": "engineering",
+      "tags": ["react", "nextjs", "fastify", "architecture", "testing", "security"]
+    },
+    {
+      "name": "research-tools",
+      "source": "./plugins/research-tools",
+      "description": "Read-only research subagent for grounded, cited answers",
+      "category": "research",
+      "tags": ["research", "agent"]
+    },
+    {
+      "name": "architecture-review",
+      "source": "./plugins/architecture-review",
+      "description": "Generalized read-only architecture/layering review subagent",
+      "category": "review",
+      "tags": ["architecture", "review", "agent"],
+      "dependencies": ["engineering-paved-path"]
+    },
+    {
+      "name": "sdd-engineering",
+      "source": "./plugins/sdd-engineering",
+      "description": "Spec-Driven Development pipeline: spec, plan, implement, verify, review",
+      "category": "engineering",
+      "tags": ["sdd", "spec", "planning", "agents"],
+      "dependencies": ["engineering-paved-path", "research-tools", "architecture-review"]
+    }
+  ]
 }
