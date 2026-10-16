@@ -1,0 +1,36 @@
+name: Validate marketplace
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Structural lint (no dependencies)
+        run: node scripts/validate-marketplace.mjs
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: claude plugin validate (marketplace)
+        run: claude plugin validate .
+
+      - name: claude plugin validate (each plugin)
+        run: |
+          set -e
+          shopt -s nullglob
+          for dir in plugins/*/; do
+            if [ -f "${dir}.claude-plugin/plugin.json" ]; then
+              echo "Validating ${dir}"
+              claude plugin validate "${dir%/}"
+            fi
+          done
