@@ -65,3 +65,8 @@ same short name.
 React/Next.js/Fastify/architecture/testing/security scope. Candidates for a
 future `1.x` release of this same plugin (additive, so dependents pinned to
 `^1.0.0` keep working).
+
+## Changelog
+
+- 1.0.1 — Add this changelog section (no skill content changes); used to
+  verify marketplace auto-update propagation end-to-end.
