@@ -1,0 +1,6 @@
+{
+  "name": "research-tools",
+  "description": "Read-only research subagent for evidence-backed, cited answers from repo code/docs/history and external sources",
+  "version": "1.0.0",
+  "author": { "name": "Vadym Shabetia", "email": "vadimshabetya89@gmail.com" }
+}

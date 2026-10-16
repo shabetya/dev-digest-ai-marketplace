@@ -10,6 +10,7 @@ plugins/<name>/                   ← one directory per plugin hosted in this re
 docs/PLUGIN-GUIDELINES.md         ← plugin layout, manifest, dependencies
 docs/SECURITY.md                  ← permissions, secrets policy, review checklist
 docs/RELEASES.md                  ← SemVer, tags, update, rename/remove, rollback
+docs/SPEC-sdd-engineering-plugins.md ← spec for the SDD engineering plugin family
 scripts/validate-marketplace.mjs  ← structural lint, zero dependencies
 scripts/release-plugin.mjs        ← bump version, validate, commit, tag
 scripts/rollback-plugin.mjs       ← restore a prior release as a new version
