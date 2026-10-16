@@ -46,6 +46,18 @@ version:
 /plugin install <name>@dev-digest-ai-marketplace
 ```
 
+## Browsing the catalog
+
+`site/` is a static search/browse UI for this catalog (see [`SPEC.md`](SPEC.md)),
+deployed to GitHub Pages on every push to `main`. To preview it locally after
+changing a plugin:
+
+```bash
+npm install
+npm run build:index   # regenerates site/data/*.json, site/llms.txt, site/index.json, site/feed.xml
+npm run serve         # http://localhost:4173
+```
+
 ## Releases
 
 ```bash

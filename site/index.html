@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dev-digest-ai-marketplace</title>
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/vendor/fuse.min.js" defer></script>
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg>
+      dev-digest-ai-marketplace
+    </a>
+    <nav aria-label="Primary">
+      <a href="#catalog">Catalog</a>
+      <a href="#whats-new">What's new</a>
+      <a href="#machine">For agents</a>
+      <a id="repo-link" class="muted" href="#top">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div class="hero-main">
+      <h1>Find the skill, agent or command you need.</h1>
+      <p class="lede">Search the catalog by name, tag or what it does. Everything runs in your browser from a prebuilt index, so it keeps working offline.</p>
+      <form id="search-form" role="search" class="search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="q" type="search" aria-label="Search the catalog" placeholder="Try &quot;review&quot;, &quot;testing&quot; or &quot;release notes&quot;" autocomplete="off">
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+    </div>
+    <div class="terminal" id="onboarding">
+      <div class="eyebrow">Start in 30 seconds</div>
+      <div class="cmd-block">
+        <div class="step">1. Add the marketplace</div>
+        <div class="cmd"><code id="cmd-add"></code><button type="button" data-copy-target="cmd-add" aria-label="Copy marketplace add command">Copy</button></div>
+      </div>
+      <div class="cmd-block">
+        <div class="step">2. Install anything you find below</div>
+        <div class="cmd"><code id="cmd-install"></code><button type="button" data-copy-target="cmd-install" aria-label="Copy install command">Copy</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-label="Catalog stats">
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section class="wrap layout" id="catalog">
+    <div class="results-col">
+      <div class="filters">
+        <div id="type-chips" class="chips" role="group" aria-label="Filter by type"></div>
+        <div class="tags-row" role="group" aria-label="Filter by tag"><span class="muted small">Tags</span><span id="tag-chips" class="tag-chips"></span></div>
+      </div>
+      <div class="results-head">
+        <h2 id="results-title">Whole catalog</h2>
+        <span id="url-state" class="mono muted small"></span>
+      </div>
+      <div id="empty" class="empty" hidden>
+        <div class="empty-title">Nothing matches that.</div>
+        <p class="muted">Try a shorter keyword, or clear the type and tag filters.</p>
+        <button type="button" id="clear-all" class="btn-ghost">Clear search and filters</button>
+      </div>
+      <div id="cards" class="cards" aria-live="polite"></div>
+      <section id="compare" class="compare" aria-label="Compare" hidden></section>
+    </div>
+
+    <aside id="whats-new" aria-label="What's new" class="feed-col">
+      <div class="feed-head"><h2>What's new</h2><a class="muted small" href="feed.xml">feed.xml</a></div>
+      <ol id="feed" class="feed"></ol>
+    </aside>
+  </section>
+</main>
+
+<footer id="machine" class="machine">
+  <div class="wrap machine-inner">
+    <div>
+      <h2>Building an agent or a tool?</h2>
+      <p>The same catalog is published as plain files at stable URLs. No scraping, no API key.</p>
+    </div>
+    <ul>
+      <li><a class="mono" href="llms.txt">/llms.txt</a><span>Readable listing for people and LLMs</span></li>
+      <li><a class="mono" href="index.json">/index.json</a><span>Versioned catalog, stable contract</span></li>
+      <li><a class="mono" href="feed.xml">/feed.xml</a><span>RSS of recent changes</span></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
