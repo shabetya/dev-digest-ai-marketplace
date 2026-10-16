@@ -34,3 +34,12 @@ jobs:
               claude plugin validate "${dir%/}"
             fi
           done
+
+      - name: Install site dependencies
+        run: npm ci
+
+      - name: Build the marketplace search index
+        run: npm run build:index
+
+      - name: Run tests
+        run: npm test
