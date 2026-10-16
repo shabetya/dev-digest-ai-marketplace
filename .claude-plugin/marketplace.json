@@ -1,0 +1,10 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "dev-digest-ai-marketplace",
+  "description": "Plugin marketplace for Dev Digest AI",
+  "owner": {
+    "name": "Vadym Shabetia",
+    "email": "vadimshabetya89@gmail.com"
+  },
+  "plugins": []
+}
