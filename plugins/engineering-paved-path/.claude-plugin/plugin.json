@@ -1,6 +1,9 @@
 {
   "name": "engineering-paved-path",
   "description": "React, Next.js, Fastify, backend/frontend architecture, testing, and security engineering skills for a TypeScript full-stack repo",
-  "version": "1.0.0",
-  "author": { "name": "Vadym Shabetia", "email": "vadimshabetya89@gmail.com" }
+  "version": "1.0.1",
+  "author": {
+    "name": "Vadym Shabetia",
+    "email": "vadimshabetya89@gmail.com"
+  }
 }
